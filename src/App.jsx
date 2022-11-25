@@ -1,16 +1,18 @@
-import { useState } from 'react'
+
+import useLocalStorage from 'use-local-storage'
 import './scss/index.scss'
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
 
-  function toggleTheme(){
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
+  const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
   }
 
   return (
-    <div data-theme={theme}>
+    <div className="app" data-theme={theme}>
+      <button onClick={switchTheme} >Toggle Me</button>
       <h1>Hello there</h1>
     </div>
   )
