@@ -1,0 +1,17 @@
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: var(--fw-bolder);
+}
+
+:focus {
+    outline: 3px solid hsl(var(--clr-primary));
+    outline-offset: 3px;
+}
