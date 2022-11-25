@@ -1,0 +1,151 @@
+:root {
+  --bg-primary: 222 47% 11%;
+  --txt-primary: 210 40% 96%;
+  --clr-primary: 25 95% 53%;
+  --clr-secondary: 192 91% 36%;
+
+  --bg-animated: linear-gradient(
+    270deg,
+    #0f172a,
+    #1e293b,
+    #334155,
+    #475569,
+    #64748b,
+    #64748b
+  );
+
+  --ff-heading: 'Raleway', sans-serif;
+  --ff-body: 'Inter', sans-serif;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  @media (min-width: 35em) {
+    & {
+      --fs-h1: 3.5rem;
+    }
+  }
+
+  @media (min-width: 55em) {
+    & {
+      --fs-h1: 4.5rem;
+      --fs-h2: 3.75rem;
+      --fs-h3: 1.5rem;
+      --fs-body: 1.125rem;
+    }
+  }
+}
+
+[data-theme='light'] {
+  --txt-primary: 222 47% 11%;
+  --bg-primary: 210 40% 96%;
+  --clr-primary: 17 88% 40%;
+  --clr-secondary: 188 86% 53%;
+
+  --bg-animated: linear-gradient(
+    270deg,
+    #f8fafc,
+    #f1f5f9,
+    #e2e8f0,
+    #cbd5e1,
+    #94a3b8,
+    #64748b
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  color: hsl(var(--txt-primary));
+  background-color: hsl(var(--bg-primary));
+  background-image: var(--bg-animated);
+  background-size: 1200% 1200%;
+  -webkit-animation: bg-animate 30s ease infinite;
+  -moz-animation: bg-animate 30s ease infinite;
+  animation: bg-animate 30s ease infinite;
+
+  @-webkit-keyframes bg-animate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-moz-keyframes bg-animate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes bg-animate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
