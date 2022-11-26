@@ -2,7 +2,7 @@
   position: fixed;
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   top: 0;
   left: 0;
   justify-content: center;
@@ -12,16 +12,20 @@
   opacity: 0;
   transform: scale(0.1);
   transition: all 500ms linear;
+
   &.active {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
+    transition: all 500ms linear;
   }
 
   &__modal {
     width: 90%;
     height: 90%;
     z-index: 100;
+    overflow: auto;
+    margin-bottom: 3em;
     background-color: hsl(var(--bg-primary) / 0.4);
     backdrop-filter: blur(1em);
     border: 1px solid hsl(var(--bg-primary) / 0.7);
@@ -29,6 +33,7 @@
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8),
       0 0 25px 3px hsl(var(--txt-primary));
     position: relative;
+    transition: all 500ms linear;
 
     &--close {
       position: absolute;

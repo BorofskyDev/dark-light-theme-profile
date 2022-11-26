@@ -4,7 +4,7 @@ function ModalContent(props) {
   return (
     <div className='Card'>
       <img
-        src={`../../../public/project-images/${slides[currentIndex].imageUrl}`}
+        src={`${slides[currentIndex].imageUrl}`}
         alt={slides[currentIndex].title}
         className='Card__img'
       />
