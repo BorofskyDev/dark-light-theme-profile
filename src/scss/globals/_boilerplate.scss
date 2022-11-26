@@ -101,6 +101,7 @@ a {
   background-color: hsl(var(--bg-primary));
   background-image: var(--bg-animated);
   background-size: 1200% 1200%;
+  transition: all 500ms ease-in;
   -webkit-animation: bg-animate 30s ease infinite;
   -moz-animation: bg-animate 30s ease infinite;
   animation: bg-animate 30s ease infinite;
