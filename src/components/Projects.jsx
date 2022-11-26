@@ -1,5 +1,10 @@
 import { Slider } from './util'
 import Blog from '../../public/project-images/blog.png'
+import UptownLanding from '../../public/project-images/uptown-landing.png'
+import Bacchus from '../../public/project-images/bacchus.png'
+import ThemeModel from '../../public/project-images/portfolio-card2.png'
+import RecipeList from '../../public/project-images/recipe-creator.png'
+import TabModel from '../../public/project-images/portfolio-card.png'
 
 function Projects() {
   const slides = [
@@ -20,7 +25,7 @@ function Projects() {
       liveSite: 'https://gleaming-lokum-a251bf.netlify.app/',
       description:
         'A rebuild of a live site of a local apartment complex, the focus was on a redesign that fit modern design standards as well as accessability standards. I altered the color scheme slightly to allow for better contract, created a more minimalist background and overall design approach, added in alt tags on images, created more sections to tab to, and added animation to the contact form. This was all done to help provide a more attractive and accessable site, which in theory will increase sales and marketing.',
-      imageUrl: '../../public/project-images/uptown-landing.png',
+      imageUrl: `${UptownLanding}`,
     },
     {
       id: 3,
@@ -29,7 +34,7 @@ function Projects() {
       liveSite: 'https://strong-florentine-202a95.netlify.app/',
       description:
         'A fictional club. I created the site to show off video-background-text as well as other design elements. While not minimalist, I followed a minimalist mindset on layout and content. Build in vanilla Javascript, I made use of modals for the fictional payment system and even set up a CSS-only credit card to function as a way for a client to enter their payment information. ',
-      imageUrl: '../../public/project-images/bacchus.png',
+      imageUrl: `${Bacchus}`,
     },
     {
       id: 4,
@@ -38,7 +43,7 @@ function Projects() {
       liveSite: 'https://superlative-donut-e109f9.netlify.app/',
       description:
         'A React app built on the use of hooks (useState) to allow a change in themes. The build is meant more to show how themes could change for a React build beyond a "light/dark" move as is often the case. In this example, I create a blue and red mode, both conveying different attitudes and approaches in color design as a fun way to show off React hooks.',
-      imageUrl: '../../public/project-images/portfolio-card2.png',
+      imageUrl: `${ThemeModel}`,
     },
     {
       id: 5,
@@ -48,7 +53,7 @@ function Projects() {
         'https://nextjs-blog-tailwind-qhttl1i3q-joelborofskydev-gmailcom.vercel.app/',
       description:
         'Built to show off the use of useEffect with local storage (as well as other React hooks), this recipe list allows users to save recipes to their local storage. I chose a more conservative design approach, basing the fonts and colors off Tuscany, as well as the backdrop image for the recipe creator function.',
-      imageUrl: '../../public/project-images/recipe-creator.png',
+      imageUrl: `${RecipeList}`,
     },
     {
       id: 6,
@@ -57,7 +62,7 @@ function Projects() {
       liveSite: 'https://glowing-tapioca-867318.netlify.app/',
       description:
         'Built to display a very simple portfolio that would be a quick build and easily scalable to a sit where users can input the data they want. The tab system is meant to show a semi-3D effect of buttons being pressed. The social media buttons also make good use of the box-shadow effect to appear to "pop" when hovered over. ',
-      imageUrl: '../../public/project-images/portfolio-card.png',
+      imageUrl: `${TabModel}`,
     },
   ]
   return (
