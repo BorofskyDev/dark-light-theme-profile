@@ -17,8 +17,9 @@
 
     &--arrow {
       position: absolute;
-      display: grid;
-      place-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       top: 130%;
       transform: translate(0, -50%);
       font-size: 2rem;
