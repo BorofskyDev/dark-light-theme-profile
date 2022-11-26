@@ -1,0 +1,208 @@
+@use '../globals';
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  // position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 1.5em;
+  z-index: 10;
+
+  &__logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.1265em;
+
+    &--title {
+      font-weight: bolder;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.0256em;
+    }
+
+    &--borofsky {
+      font-size: 1.25rem;
+      color: hsl(var(--clr-primary));
+    }
+
+    &--dev {
+      font-size: 1.25rem;
+      color: hsl(var(--clr-secondary));
+    }
+  }
+
+  .menu__trigger {
+    display: flex;
+    flex-direction: column;
+    height: 3em;
+    width: 3em;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    padding: 0.625em;
+    cursor: pointer;
+    z-index: 1000;
+
+    span {
+      display: inline-flex;
+      width: 1.875em;
+      height: 0.25em;
+      border-radius: 1rem;
+      background-color: hsl(var(--clr-primary));
+      transition: all 500ms ease-in-out;
+    }
+  }
+
+  .menu__close {
+    span {
+      position: absolute;
+      background-color: hsl(var(--clr-primary));
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 9;
+        height: 0;
+        width: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media (min-width: 35em) {
+    .Header {
+      &__logo {
+        &--title {
+          font-size: 2rem;
+        }
+        &--borofsky {
+            font-size: 2.5rem;
+        }
+        &--dev {
+            font-size: 2.5rem;
+        }
+      }
+      &__icon {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.Menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  background-color: transparent;
+  z-index: 0;
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    z-index: 9;
+    width: 18.75em;
+    right: 0;
+    overflow: hidden;
+  }
+
+  &__layer,
+  &__nav {
+    border-radius: 0.625em 0 0 0.625em;
+    border: 1px solid;
+    box-shadow: 0 0.5em 2em 0 hsl(var(--clr-primary) / 0.37);
+  }
+
+  &__layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background: hsl(var(--clr-primary) / 0.2);
+    backdrop-filter: blur(0.5em);
+    -webkit-backdrop-filter: blur(0.5em);
+    border-color: hsl(var(--clr-secondary));
+    z-index: -1;
+  }
+
+  &__nav {
+    position: relative;
+    width: 18.75em;
+    padding-top: 3.125em;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: hsl(var(--bg-primary) / 0.37);
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+    border-color: hsl(var(--clr-primary));
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__top {
+    overflow: hidden;
+    display: flex;
+    height: calc(100% - 16.25em);
+  }
+
+  &__links {
+    overflow: hidden;
+    overflow-y: auto;
+    margin-top: 2.5em;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-shrink: 0;
+  }
+
+  &__link {
+    padding: 1em;
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    font-weight: 700;
+    width: 17.5em;
+
+    &--section {
+      color: hsl(var(--txt-primary));
+      text-shadow: 0 0 3px #000;
+      background-color: hsl(var(--clr-primary));
+      padding: 0.3em 3em;
+      border-radius: 1em 0 0 1em;
+      width: 100%;
+      transform: scale(1);
+      transition: all 500ms ease-in-out;
+
+      &:hover,
+      &:focus {
+        scale: (1.05);
+        box-shadow: 0 0 0.575em 0.0875em rgba(0, 0, 0, 0.8),
+          0 0 1em 0.0625em rgba(0, 0, 0, 0.4),
+          0 0 1em 0.0625em hsl(var(--clr-primary) / 0.85) inset;
+      }
+    }
+  }
+}
