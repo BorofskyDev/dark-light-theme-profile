@@ -1,0 +1,52 @@
+@media (min-width: 55em) {
+  .About {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      'title img'
+      'subtitle img'
+      'text img';
+    column-gap: 2em;
+
+    &__img {
+      grid-area: img;
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__body {
+      grid-area: text;
+    }
+  }
+
+  .section__title--about {
+    grid-area: title;
+  }
+
+  .section__subtitle--about {
+    grid-area: subtitle;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    padding-right: calc(200px + 4em);
+    margin: 0;
+  }
+}
+
+@media (min-width: 70em) {
+  .About {
+    &__img {
+      min-width: 20em;
+      height: 100%;
+      object-fit: cover;
+    }
+    .section__subtitle--about {
+      width: calc(100% + 8em);
+    }
+  }
+}
