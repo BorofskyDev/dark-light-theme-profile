@@ -32,15 +32,19 @@ function About() {
       />
       <div className='About__social-media'>
         <a href='#' className='About__social-media--link'>
+          <span className="sr-only">Github</span>
           <FaGithub className='About__social-media--icon github' />
         </a>
         <a href='#' className='About__social-media--link'>
+          <span className="sr-only">Linkedin</span>
           <FaLinkedinIn className='About__social-media--icon linkedin' />
         </a>
         <a href='#' className='About__social-media--link'>
+          <span className="sr-only">Codepen</span>
           <FaCodepen className='About__social-media--icon codepen' />
         </a>
         <a href='#' className='About__social-media--link'>
+          <span className="sr-only">Twitter</span>
           <FaTwitter className='About__social-media--icon twitter' />
         </a>
       </div>

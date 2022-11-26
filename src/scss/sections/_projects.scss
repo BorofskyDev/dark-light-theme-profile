@@ -1,0 +1,81 @@
+.Projects {
+  &__container {
+    width: 500px;
+    height: 280px;
+    margin: 0 auto;
+    border-radius: 2em;
+  }
+  &__slider {
+    height: 100%;
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 2.8125rem;
+    color: hsl(var(--clr-primary));
+    z-index: 1;
+    padding: 0.5em;
+    background-color: hsl(var(--bg-primary));
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 500ms linear;
+
+    &:hover,
+    &:focus {
+      background-color: hsl(var(--clr-secondary));
+      color: hsl(var(--text-primary));
+    }
+  }
+
+  &__slides {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+
+    &--modal-btn {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 0 0 10px 10px;
+      border: none;
+      background-color: hsl(var(--bg-primary));
+      color: hsl(var(--text-primary));
+      cursor: pointer;
+      transition: all 500ms linear;
+
+      &:hover,
+      &:focus {
+        background-color: hsl(var(--clr-primary));
+      }
+    }
+  }
+
+  &__dots-container {
+    display: flex;
+    justify-content: center;
+
+    &--style {
+      margin: 6px 12px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+
+  .left {
+    left: 30rem;
+  }
+
+  .right {
+    right: 30rem;
+  }
+}
