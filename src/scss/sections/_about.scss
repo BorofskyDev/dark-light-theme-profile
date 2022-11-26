@@ -1,0 +1,147 @@
+.About {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &__body {
+    padding-left: 1em;
+    line-height: 1.5;
+    max-width: 700px;
+
+    @media (min-width: 55em) {
+      & {
+        grid-area: text;
+      }
+    }
+  }
+
+  &__img {
+    border-radius: 2em;
+    max-width: 90%;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.8), 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    margin: 1.5em auto;
+
+    @media (min-width: 55em) {
+      & {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @media (min-width: 70em) {
+      & {
+        min-width: 20em;
+        height: 100%;
+        object-fit: cover;
+        display: hidden;
+      }
+    }
+  }
+
+  &__social-media {
+    margin: 1em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &--link {
+      padding: 1em 0 0 1em;
+      font-size: 1.5rem;
+    }
+
+    &--icon {
+      color: hsl(var(--clr-primary));
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      height: 2em;
+      width: 2em;
+      padding: 0.3em;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.8),
+        0 0 15px 1px rgba(0, 0, 0, 0.4);
+      transform: scale(1);
+      transition: all 500ms ease-in-out;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.2) rotate(360deg);
+      }
+    }
+    .github {
+      &:hover,
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: rgba(110, 84, 148, 1);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4),
+          0 0 30px 2px rgba(110, 84, 148, 1);
+      }
+    }
+    .linkedin {
+      &:hover,
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.4);
+        color: rgba(0, 119, 181, 1);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4),
+          0 0 30px 2px rgba(0, 119, 181, 1);
+      }
+    }
+
+    .codepen {
+      &:hover,
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: rgba(225, 226, 226, 1);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4),
+          0 0 30px 2px rgba(225, 226, 226, 1);
+      }
+    }
+
+    .twitter {
+      &:hover,
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.4);
+        color: rgba(29, 161, 242, 1);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4),
+          0 0 30px 2px rgba(29, 161, 242, 1);
+      }
+    }
+  }
+
+  .section__title--about {
+    grid-area: title;
+  }
+
+  .section__subtitle--about {
+    margin: 0 auto;
+    width: 100%;
+
+    @media (min-width: 55em) {
+      & {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+        margin: 0;
+      }
+    }
+  }
+
+  @media (min-width: 55em) {
+    & {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      grid-template-areas:
+        'title img'
+        'subtitle img'
+        'text img';
+      column-gap: 2em;
+    }
+  }
+}

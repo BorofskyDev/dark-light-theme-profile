@@ -1,10 +1,6 @@
-.curved-div {
-  background-color: hsl(var(--clr-primary));
-  margin: 0;
-  padding: 0; 
-  width: calc(100% + 1.5em);
-
-  svg {
-    display: block;
-  }
+.section__title {
+  margin-bottom: 0.25em;
+  overflow: hidden;
+  text-align: center;
+  padding-left: 0.5em;
 }
