@@ -26,14 +26,21 @@ strong {
   background: hsl(var(--clr-secondary));
   padding: 0.25em 1em;
   font-family: var(--ff-heading);
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   width: calc(100% + 1.5em);
   text-align: center;
 }
 
-.section__title--intro {
-  strong {
-    display: block;
-    color: hsl(var(--clr-primary));
+.section__title {
+  &--intro {
+    strong {
+      display: block;
+      color: hsl(var(--clr-primary));
+    }
+  }
+
+  &--stack {
+    text-align: center;
+    margin-bottom: 1.5em;
   }
 }
