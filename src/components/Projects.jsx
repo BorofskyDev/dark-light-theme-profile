@@ -1,5 +1,5 @@
 import { Slider } from './util'
-import data from '../assets/data'
+import Blog from '../../public/project-images/blog.png'
 
 function Projects() {
   const slides = [
@@ -11,7 +11,7 @@ function Projects() {
         'https://nextjs-blog-tailwind-qhttl1i3q-joelborofskydev-gmailcom.vercel.app/',
       description:
         'A blog completed using TailwindCSS, Hygraph, and Nextjs as the framework. Using Nextjs, I was able to optimize performance as well as enhance the SEO. Likewise, I made the blog more accessibly by using an offwhite/light-gray instead of a bright white, allowing those with light sensitivity to read the blog with greater ease.',
-      imageUrl: '../../public/project-images/blog.png',
+      imageUrl: `${Blog}`,
     },
     {
       id: 2,
