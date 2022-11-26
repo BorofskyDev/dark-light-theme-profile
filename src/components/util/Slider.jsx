@@ -38,8 +38,13 @@ function Slider({ slides }) {
         <button className='Projects__slides--modal-btn' onClick={openModal}>
           See Project
         </button>
-   
-        <Modal  slides={slides} toggle={modal} action={openModal} />
+
+        <Modal
+          currentIndex={currentIndex}
+          slides={slides}
+          toggle={modal}
+          action={openModal}
+        />
       </div>
     </div>
   )

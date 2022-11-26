@@ -1,30 +1,24 @@
-import React from 'react'
-
 function ModalContent(props) {
+  const { slides, currentIndex, setCurrentIndex } = props
+
   return (
-    <div className='card'>
+    <div className='Card'>
       <img
-        src={`src/assets/images/${props.imageUrl}`}
-        alt=''
-        className='card__img'
+        src={`../../../public/project-images/${slides[currentIndex].imageUrl}`}
+        alt={slides[currentIndex].title}
+        className='Card__img'
       />
-      <div className='card__container'>
-        <header className='card__header'>
-         
-          <p className='card__country'>{props.location}</p>
-          <a
-            href={props.googleMapsUrl}
-            target='_blank'
-            className='card__location-link'
-          >
-            View on Google Maps
+      <div className='Card__container'>
+        <header className='Card__header'>
+          <a href={slides[currentIndex].repository} target='_blank' className='Card__link'>
+            Repository
+          </a>
+          <a href={slides[currentIndex].liveSite} target='_blank' className='Card__link'>
+            Live Site
           </a>
         </header>
-        <h1 className='card__title'>{props.title}</h1>
-        <p className='card__date'>
-          {props.startDate} - {props.endDate}
-        </p>
-        <p className='card__description'>{props.description}</p>
+        <h3 className='Card__title'>{slides[currentIndex].title}</h3>
+        <p className='Card__desc'>{slides[currentIndex].description}</p>
       </div>
     </div>
   )
