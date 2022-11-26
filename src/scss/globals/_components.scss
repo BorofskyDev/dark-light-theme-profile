@@ -1,0 +1,10 @@
+.curved-div {
+  background-color: hsl(var(--clr-primary));
+  margin: 0;
+  padding: 0; 
+  width: calc(100% + 1.5em);
+
+  svg {
+    display: block;
+  }
+}

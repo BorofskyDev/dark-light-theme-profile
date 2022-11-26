@@ -5,7 +5,7 @@ import './scss/index.scss'
 function App() {
   const [theme, setTheme] = useState('dark')
 
-  const switchTheme = () => {
+  const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
   }
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="app" data-theme={theme}>
       <Navbar />
-      <Hero />
+      <Hero toggleTheme={toggleTheme} />
       <About />
       <Stack />
       <Projects />

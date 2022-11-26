@@ -179,6 +179,7 @@
   }
 
   &__link {
+   
     padding: 1em;
     display: flex;
     text-transform: uppercase;
@@ -187,7 +188,7 @@
     width: 17.5em;
 
     &--section {
-      color: hsl(var(--txt-primary));
+       color: hsl(210 40% 96%);
       text-shadow: 0 0 3px #000;
       background-color: hsl(var(--clr-primary));
       padding: 0.3em 3em;

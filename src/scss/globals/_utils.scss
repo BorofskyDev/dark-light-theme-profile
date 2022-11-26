@@ -1,17 +1,39 @@
 section {
-    padding: 5em 2em;
+  padding: 5em 2em;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 strong {
-    font-weight: var(--fw-bolder);
+  font-weight: var(--fw-bolder);
 }
 
 :focus {
-    outline: 3px solid hsl(var(--clr-primary));
-    outline-offset: 3px;
+  outline: 3px solid hsl(var(--clr-primary));
+  outline-offset: 3px;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+  background: hsl(var(--clr-secondary));
+  padding: 0.25em 1em;
+  font-family: var(--ff-heading);
+  margin-bottom: 1em;
+  width: calc(100% + 1.5em);
+  text-align: center;
+}
+
+.section__title--intro {
+  strong {
+    display: block;
+    color: hsl(var(--clr-primary));
+  }
 }
