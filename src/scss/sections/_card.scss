@@ -1,0 +1,48 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+
+    &__img {
+        max-width: 60%;
+        height: 100%;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 2em;
+    }
+
+    &__link {
+        color: hsl(var(--txt-primary));
+        font-size: var(--fs-body);
+
+        &:hover,
+        &:focus {
+            color: hsl(var(--clr-primary));
+        }
+    }
+
+    &__desc {
+        border: 1px solid hsl(var(--bg-primary));
+        padding: 3em;
+        text-align: justify;
+        background-color: hsl(var(--bg-primary) / 0.8 );
+        box-shadow: 0 0 8px 3px hsl(var(--txt-primary)) inset;
+        border-radius: 2em;
+        line-height: 1.7;
+    }
+}

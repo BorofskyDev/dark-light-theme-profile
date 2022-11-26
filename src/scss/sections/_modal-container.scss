@@ -22,8 +22,12 @@
     width: 90%;
     height: 90%;
     z-index: 100;
-    background-color: hsl(var(--bg-primary) / 0.7);
+    background-color: hsl(var(--bg-primary) / 0.4);
     backdrop-filter: blur(1em);
+    border: 1px solid hsl(var(--bg-primary) / 0.7);
+    border-radius: 2em;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8),
+      0 0 25px 3px hsl(var(--txt-primary));
     position: relative;
 
     &--close {
@@ -31,10 +35,22 @@
       top: 10px;
       right: 10px;
       background-size: contain;
-      width: 30px;
-      height: 30px;
-      font-size: 3rem;
+      width: 2em;
+      height: 3em;
+      font-size: 4rem;
       cursor: pointer;
+    }
+    
+    &--icon {
+      color: hsl(var(--clr-primary));
+      background-color: hsl(var(--bg-primary) / 0.7);
+      border-radius: 50%;
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.8);
+
+      &:hover,
+      &:focus {
+        color: hsl(var(--clr-secondary))
+      }
     }
   }
 }

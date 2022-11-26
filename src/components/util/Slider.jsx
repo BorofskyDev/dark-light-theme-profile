@@ -28,12 +28,6 @@ function Slider({ slides }) {
 
   return (
     <div className='Projects__slider'>
-      <div className='Projects__arrow right' onClick={goToPrevious}>
-        <AiOutlineArrowLeft />
-      </div>
-      <div className='Projects__arrow left' onClick={goToNext}>
-        <AiOutlineArrowRight />
-      </div>
       <div className='Projects__slides' style={slideStyle}>
         <button className='Projects__slides--modal-btn' onClick={openModal}>
           See Project
@@ -45,6 +39,20 @@ function Slider({ slides }) {
           toggle={modal}
           action={openModal}
         />
+      </div>
+      <div className='Projects__arrow-container'>
+        <div
+          className='Projects__arrow-container--arrow right'
+          onClick={goToPrevious}
+        >
+          <AiOutlineArrowLeft />
+        </div>
+        <div
+          className='Projects__arrow-container--arrow left'
+          onClick={goToNext}
+        >
+          <AiOutlineArrowRight />
+        </div>
       </div>
     </div>
   )

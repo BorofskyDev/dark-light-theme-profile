@@ -1,4 +1,4 @@
-import React from 'react'
+import { SlClose} from 'react-icons/sl'
 import ModalContent from './ModalContent'
 
 function Modal(props) {
@@ -10,7 +10,7 @@ function Modal(props) {
       <div className='Modal-container__modal'>
         <div className='Modal-container__modal--title'><ModalContent slides={slides} currentIndex={currentIndex}  /></div>
         <div className='Modal-container__modal--close' onClick={action}>
-          X
+          <SlClose className='Modal-container__modal--icon' />
         </div>
       </div>
     </div>
