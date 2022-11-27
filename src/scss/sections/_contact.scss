@@ -1,23 +1,33 @@
 .Contact {
   margin-top: 4em;
-//   background-color: hsl(var(--bg-primary) / 0.8);
-//   background-image: url(../../../public/bg-contact.jpg);
-//   background-size: cover;
-//   background-blend-mode: multiply;
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
 
-  &__form {
-    margin-top: 2em;
-    max-width: 1200px;
-    border: 1px solid hsl(var(--txt-primary));
-    background: hsl(var(--bg-primary) / 0.35);
-    backdrop-filter: blur(7.5px);
-    -webkit-backdrop-filter: blur(7.5px);
-    border-radius: 10px;
-    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.8), 0 0 30px 1px rgba(0, 0, 0, 0.4);
-  }
+ &__screen {
+    position: relative;
+    background-color: hsl(var(--bg-primary));
+    border-radius: 2em;
 
-  &__container {
-    
-    
-  }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        right: 20px;
+        bottom: 0;
+        border-radius: 2em;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        z-index: -1;
+    }
+ }
+
+ &__header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: hsl(var(--bg-primary));
+ }
 }
