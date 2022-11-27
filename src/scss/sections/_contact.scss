@@ -1,3 +1,55 @@
 .Contact {
-  
+  max-width: 1200px;
+  margin: 3em 2em;
+  border: 1px solid hsl(var(--txt-primary));
+  border-radius: 2em;
+  box-shadow: 0 10px 20px 3px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    &--bottom {
+      border-bottom: 4px solid hsl(var(--clr-primary));
+      padding-bottom: 0.4em;
+    }
+  }
+
+  &__links {
+    text-align: center;
+    &--title {
+      margin: 1em;
+    }
+    &--link {
+      margin: 1em;
+      color: hsl(var(--clr-primary));
+      transition: all 500ms linear;
+
+      &:hover,
+      &:focus {
+        color: hsl(var(--clr-secondary));
+        letter-spacing: 0.0625em;
+      }
+    }
+  }
+
+  &__email {
+    font-size: 0.775rem;
+  }
 }
