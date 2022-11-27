@@ -21,7 +21,8 @@
   margin-bottom: 2em;
 
   &--intro,
-  &--about {
+  &--about,
+  &--contact {
     background: hsl(var(--clr-secondary));
     padding: 0.25em 1em;
     font-family: var(--ff-heading);

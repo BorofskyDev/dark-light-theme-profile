@@ -55,7 +55,7 @@ function Stack() {
           href='https://threejs-journey.com/'
           target='_blank'
           className='Stack__btn'
-          style={{ '--clr': '#6d28d9' }}
+          style={{ '--clr': '#6151D2' }}
         >
           <SiThreedotjs className='Stack__btn--icon' />
           Threejs / React-Three-Fiber
