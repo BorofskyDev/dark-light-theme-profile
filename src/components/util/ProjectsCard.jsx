@@ -9,10 +9,10 @@ function ProjectsCard(props) {
         <div className='Card__body'>
           <h3 className='Card__body--title'>{title}</h3>
           <div className='Card__body--links'>
-            <a href={liveSite} className='Card__body--link'>
+            <a href={liveSite} target='_blank' className='Card__body--link'>
               Live Site
             </a>
-            <a href={repository} className='Card__body--link'>
+            <a href={repository} target='_blank' className='Card__body--link'>
               Repository
             </a>
           </div>
