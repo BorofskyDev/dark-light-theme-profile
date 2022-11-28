@@ -9,16 +9,32 @@ function Contact() {
         </div>
         <div className='Contact__links'>
           <h3 className='Contact__links--title'>Also find me here:</h3>
-          <a href='#' className='Contact__links--link'>
+          <a
+            href='https://github.com/BorofskyDev'
+            target='_blank'
+            className='Contact__links--link'
+          >
             GitHub
           </a>
-          <a href='#' className='Contact__links--link'>
+          <a
+            href='https://www.linkedin.com/in/joelborofsky/'
+            target='_blank'
+            className='Contact__links--link'
+          >
             LinkedIn
           </a>
-          <a href='#' className='Contact__links--link'>
+          <a
+            href='https://codepen.io/borofskyDev'
+            target='_blank'
+            className='Contact__links--link'
+          >
             Twitter
           </a>
-          <a href='#' className='Contact__links--link'>
+          <a
+            href='https://twitter.com/DevBorofsky'
+            target='_blank'
+            className='Contact__links--link'
+          >
             CodePen
           </a>
         </div>

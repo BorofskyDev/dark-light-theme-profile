@@ -1,4 +1,11 @@
-import { FaGithub, FaLinkedinIn, FaCodepen, FaTwitter, FaLink, FaCode } from 'react-icons/fa'
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaCodepen,
+  FaTwitter,
+  FaLink,
+  FaCode,
+} from 'react-icons/fa'
 import joel2 from '../assets/personal-images/me-kyiv.jpg'
 
 function About() {
@@ -31,19 +38,35 @@ function About() {
         className='About__img shadow-md border-radius'
       />
       <div className='About__social-media'>
-        <a href='#' className='About__social-media--link '>
+        <a
+          href='https://github.com/BorofskyDev'
+          target='_blank'
+          className='About__social-media--link '
+        >
           <span className='sr-only'>Github</span>
           <FaGithub className='About__social-media--icon shadow-sm border-radius-full github' />
         </a>
-        <a href='#' className='About__social-media--link'>
+        <a
+          href='https://www.linkedin.com/in/joelborofsky/'
+          target='_blank'
+          className='About__social-media--link'
+        >
           <span className='sr-only'>Linkedin</span>
           <FaLinkedinIn className='About__social-media--icon shadow-sm border-radius-full linkedin' />
         </a>
-        <a href='#' className='About__social-media--link'>
+        <a
+          href='https://codepen.io/borofskyDev'
+          target='_blank'
+          className='About__social-media--link'
+        >
           <span className='sr-only'>Codepen</span>
           <FaCodepen className='About__social-media--icon shadow-sm border-radius-full codepen' />
         </a>
-        <a href='#' className='About__social-media--link'>
+        <a
+          href='https://twitter.com/DevBorofsky'
+          target='_blank'
+          className='About__social-media--link'
+        >
           <span className='sr-only'>Twitter</span>
           <FaTwitter className='About__social-media--icon shadow-sm border-radius-full twitter' />
         </a>
