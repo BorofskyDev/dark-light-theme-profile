@@ -1,22 +1,24 @@
 .Contact {
   max-width: 1200px;
-  margin: 3em 2em;
-  background-color: hsl(var(--bg-primary) / 0.7 );
-  // border: 1px solid hsl(var(--bg-primary));
+  margin: 3em auto;
+  background-color: hsl(var(--bg-primary) / 0.7);
   border-radius: 2em;
-  // box-shadow: 0 10px 20px 3px rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2em;
 
   &__content-container {
     display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid hsl(var(--clr-primary));
   }
 
   &__header {
@@ -53,5 +55,71 @@
 
   &__email {
     font-size: 0.775rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  &__form-control {
+    &--input {
+      padding: 1em;
+      border-radius: 2em;
+      border: none;
+      border-bottom: 1px solid hsl(var(--clr-secondary));
+      background: transparent;
+      color: hsl(var(--txt-primary));
+      box-shadow: 0 8px 8px 3px rgba(0, 0, 0, 0.8) inset,
+        0 -2px 4px 1px hsl(var(--clr-secondary)) inset;
+      transition: all 200ms linear;
+
+      &:focus {
+        box-shadow: 0 8px 8px 3px rgba(0, 0, 0, 0.8) inset,
+          0 -2px 4px 1px hsl(var(--clr-primary)) inset;
+        border-color: hsl(var(--clr-primary));
+      }
+
+      &::placeholder {
+        text-align: center;
+        color: hsl(var(--txt-primary) / 0.7);
+      }
+    }
+  }
+  &__button {
+    margin: 2em auto;
+    padding: 1em 3em;
+    border-radius: 2em;
+    border: 1px solid hsl(var(--clr-secondary));
+    background: transparent;
+    color: hsl(var(--txt-primary));
+    cursor: pointer;
+    transition: all 500ms linear;
+
+    &:hover,
+    &:focus {
+      border-color: hsl(var(--clr-primary));
+      background-color: hsl(var(--clr-primary));
+      text-shadow: 0 0 3px #000;
+      letter-spacing: 1px;
+    }
+  }
+
+}
+
+@media (min-width: 55em){
+  .Contact {
+    flex-direction: row;
+
+    &__content-container {
+      border: none;
+      margin-right: 10%;
+      padding: 0;
+      height: 100%;
+      border-right: 1px solid hsl(var(--clr-primary));
+    }
   }
 }

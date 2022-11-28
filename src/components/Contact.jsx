@@ -84,7 +84,7 @@ function Contact() {
               className='Contact__form-control--input'
             />
           </div>
-          <button className="Contact__button">Send Message</button>
+          <button className="Contact__button shadow-md">Send Message</button>
         </form>
       </div>
     </section>
