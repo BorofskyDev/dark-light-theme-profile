@@ -1,0 +1,54 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+  background-color: hsl(var(--bg-primary));
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    &--img {
+      width: 6em;
+      border-radius: 2em;
+    }
+
+    &--name {
+      font-weight: 700;
+    }
+  }
+
+  &__logo {
+    &--borofsky {
+      color: hsl(var(--clr-primary));
+    }
+
+    &--dev {
+      color: hsl(var(--clr-secondary));
+    }
+  }
+
+  &__slava {
+    &--ukr {
+      color: #facc15;
+    }
+
+    &--iane {
+      color: #3b82f6;
+    }
+  }
+}
+
+@media (min-width: 55em) {
+    .Footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,6 +1,6 @@
 .Contact {
   max-width: 1200px;
-  margin: 3em auto;
+  margin: 3em 2em;
   background-color: hsl(var(--bg-primary) / 0.7);
   border-radius: 2em;
   display: flex;
@@ -113,11 +113,12 @@
 @media (min-width: 55em){
   .Contact {
     flex-direction: row;
+    margin: 3em auto;
 
     &__content-container {
       border: none;
       margin-right: 10%;
-      padding: 0;
+      
       height: 100%;
       border-right: 1px solid hsl(var(--clr-primary));
     }
