@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedinIn, FaCodepen, FaTwitter, FaLink, FaCode } from 'react-icons/fa'
-import joel2 from '../../public/personal-images/me-kyiv.jpg'
+import joel2 from '../assets/personal-images/me-kyiv.jpg'
 
 function About() {
   return (

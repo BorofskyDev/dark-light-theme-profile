@@ -1,47 +1,57 @@
 .Card {
+  &__container {
+    max-width: 15.625em;
+    height: 30em;
+    border: 1px solid hsl(var(--clr-secondary));
+    border-radius: 2em;
+    transition: all 500ms linear;
+    box-shadow: 0 12px 20px 4px rgba(0, 0, 0, 0.8),
+      0 24px 40px 1px rgba(0, 0, 0, 0.4),
+      0 6px 12px 2px hsl(var(--clr-secondary));
+
+    &:hover,
+    &:focus {
+      border-color: hsl(var(--clr-primary));
+      box-shadow: 0 12px 20px 4px rgba(0, 0, 0, 0.8),
+        0 24px 40px 1px rgba(0, 0, 0, 0.4),
+        0 6px 12px 2px hsl(var(--clr-primary));
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2em;
+    padding: 1em;
 
-    &__img {
-        max-width: 60%;        
+    &--title {
+      margin-bottom: 0.5em;
     }
 
-    &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2em;
+    &--links {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 0.5em;
+    };
+
+    &--link {
+      color: hsl(var(--clr-primary));
+
+      &:hover,
+      &:focus {
+        text-shadow: 0 0 10px hsl(var(--clr-primary));
+      }
     }
 
-    &__header {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        margin-top: 2em;
+    &--description {
+      text-align: left;
+      margin: 0.5em;
     }
-
-    &__link {
-        color: hsl(var(--txt-primary));
-        font-size: var(--fs-body);
-
-        &:hover,
-        &:focus {
-            color: hsl(var(--clr-primary));
-        }
-    }
-
-    &__desc {
-        border: 1px solid hsl(var(--bg-primary));
-        padding: 3em;
-        text-align: justify;
-        background-color: hsl(var(--bg-primary) / 0.8 );
-        box-shadow: 0 0 8px 3px hsl(var(--txt-primary)) inset;
-        border-radius: 2em;
-        line-height: 1.7;
-    }
+  }
 }

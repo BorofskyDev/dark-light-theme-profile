@@ -1,11 +1,11 @@
-import Blog from '../public/project-images/blog.png'
-import UptownLanding from '../public/project-images/uptown-landing.png'
-import Bacchus from '../public/project-images/bacchus.png'
-import ThemeModel from '../public/project-images/portfolio-card2.png'
-import RecipeList from '../public/project-images/recipe-creator'
-import TabModel from '../public/project-images/portfolio-card.png'
+import Blog from './project-images/blog.png'
+import UptownLanding from './project-images/uptown-landing.png'
+import Bacchus from './project-images/bacchus.png'
+import ThemeModel from './project-images/portfolio-card2.png'
+import RecipeList from './project-images/recipe-creator.png'
+import TabModel from './project-images/portfolio-card.png'
 
-export const slides = [
+export default [
   {
     id: 1,
     title: 'Nextjs Blog with Tailwind',

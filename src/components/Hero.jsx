@@ -1,5 +1,5 @@
 import { GiBarbedSun, GiFalconMoon } from 'react-icons/gi'
-import joel1 from '../../public/personal-images/me1.jpg'
+import joel1 from '../assets/personal-images/me1.jpg'
 
 function Hero(props) {
   const { toggleTheme, theme, setTheme } = props

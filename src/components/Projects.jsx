@@ -1,10 +1,19 @@
+import data from '../assets/projectData'
+import { ProjectsCard } from './util'
 
 function Projects() {
- return ( 
-  <section className="Projects">
-    <h2 className="Projects__title">Projects</h2>
-  </section>
- )
+  const cards = data.map((item) => {
+    return <ProjectsCard key={item.id} {...item} />
+  })
+
+  return (
+    <section className='Projects'>
+      <h2 className='section__title'>Projects</h2>
+      <div className='Projects__container'>
+        {cards}
+      </div>
+    </section>
+  )
 }
 
 export default Projects
