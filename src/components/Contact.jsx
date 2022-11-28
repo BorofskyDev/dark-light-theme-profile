@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section className='Contact shadow-lg border-radius'>
+    <section className='Contact shadow-lg border-radius' id='contact'>
       <div className='Contact__content-container '>
         {/* top/left content */}
         <div className='Contact__header'>

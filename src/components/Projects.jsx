@@ -7,7 +7,7 @@ function Projects() {
   })
 
   return (
-    <section className='Projects'>
+    <section className='Projects' id='projects'>
       <h2 className='section__title'>Projects</h2>
       <div className='Projects__container'>
         {cards}

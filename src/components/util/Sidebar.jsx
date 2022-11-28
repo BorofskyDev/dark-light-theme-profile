@@ -28,25 +28,27 @@ function Sidebar(props) {
     menu ? menuTimeline.current.play() : menuTimeline.current.reverse()
   }, [menu])
 
+
+
   return (
     <div className='Menu' ref={(el) => (sidebarMenuOverlay = el)}>
       <div className='Menu__wrapper'>
         <div className='Menu__layer' ref={(el) => (menuLayer = el)}></div>
-        <nav className="Menu__nav" ref={(el) => (sidebarMenu = el)} >
-          <div className="Menu__top">
-            <ul className="Menu__links">
-              <li className="Menu__link">
-                <a href="#" className="Menu__link--section">
+        <nav className='Menu__nav' ref={(el) => (sidebarMenu = el)}>
+          <div className='Menu__top'>
+            <ul className='Menu__links'>
+              <li className='Menu__link'>
+                <a href='#about' className='Menu__link--section'>
                   About
                 </a>
               </li>
-              <li className="Menu__link">
-                <a href="#" className="Menu__link--section">
+              <li className='Menu__link'>
+                <a href='#projects' className='Menu__link--section'>
                   Projects
                 </a>
               </li>
-              <li className="Menu__link">
-                <a href="#" className="Menu__link--section">
+              <li className='Menu__link'>
+                <a href='#contact' className='Menu__link--section'>
                   Contact
                 </a>
               </li>

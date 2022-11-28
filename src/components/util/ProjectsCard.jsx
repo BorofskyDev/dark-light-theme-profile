@@ -3,7 +3,7 @@ function ProjectsCard(props) {
   const { title, repository, liveSite, description, imageUrl } = props
 
   return (
-    <container className='Card'>
+    <div className='Card'>
       <div className='Card__container border-radius'>
         <img src={imageUrl} alt={title} className='Card__image' />
         <div className='Card__body'>
@@ -21,7 +21,7 @@ function ProjectsCard(props) {
           </div>
         </div>
       </div>
-    </container>
+    </div>
   )
 }
 

@@ -1,6 +1,7 @@
 @use '../globals';
 
 .Header {
+  // position: fixed;
   display: flex;
   justify-content: space-between;
   // position: fixed;
@@ -9,7 +10,7 @@
   right: 0;
   margin: auto;
   padding: 1.5em;
-  z-index: 10;
+  z-index: 1000;
 
   &__logo {
     display: inline-flex;
@@ -42,15 +43,18 @@
     width: 3em;
     align-items: center;
     justify-content: space-evenly;
-    background-color: transparent;
+    background-color: hsl(var(--bg-primary) / 0.37);
     border: 0;
-    position: relative;
+    position: fixed;
+    margin-right: 6em;
+    right: 0;
     padding: 0.625em;
     cursor: pointer;
     z-index: 1000;
 
     span {
       display: inline-flex;
+      // margin-right: 5em;
       width: 1.875em;
       height: 0.25em;
       border-radius: 1rem;

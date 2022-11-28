@@ -3,7 +3,7 @@ import joel2 from '../assets/personal-images/me-kyiv.jpg'
 
 function About() {
   return (
-    <section className='About'>
+    <section className='About' id='about'>
       <h2 className='section__title section__title--about'>Who I am</h2>
       <p className='section__subtitle section__subtitle--about'>
         Developer and Designer based in the USA
