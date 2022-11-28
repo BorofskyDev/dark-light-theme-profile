@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section className='Contact shadow-lg'>
+    <section className='Contact shadow-lg border-radius'>
       <div className='Contact__content-container '>
         {/* top/left content */}
         <div className='Contact__header'>
@@ -44,7 +44,7 @@ function Contact() {
               max='30'
               placeholder='Name'
               required
-              className='Contact__form-control--input'
+              className='Contact__form-control--input border-radius'
             />
           </div>
           <div className='Contact__form-control'>
@@ -56,7 +56,7 @@ function Contact() {
               name='email address'
               placeholder='Email'
               required
-              className='Contact__form-control--input'
+              className='Contact__form-control--input border-radius'
             />
           </div>
           <div className='Contact__form-control'>
@@ -70,7 +70,7 @@ function Contact() {
               max='40'
               placeholder='Subject'
               required
-              className='Contact__form-control--input'
+              className='Contact__form-control--input border-radius'
             />
           </div>
           <div className='Contact__form-control'>
@@ -81,10 +81,12 @@ function Contact() {
               name='message'
               placeholder='Message'
               required
-              className='Contact__form-control--input'
+              className='Contact__form-control--input border-radius'
             />
           </div>
-          <button className="Contact__button shadow-md">Send Message</button>
+          <button className='Contact__button shadow-md border-radius'>
+            Send Message
+          </button>
         </form>
       </div>
     </section>

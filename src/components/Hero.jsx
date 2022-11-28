@@ -13,17 +13,17 @@ function Hero(props) {
         <p className='section__subtitle section__subtitle--intro'>
           Creative Frontend Developer
         </p>
-        <img src={joel1} alt='' className='Hero__img shadow-lg' />
+        <img src={joel1} alt='' className='Hero__img shadow-lg border-radius' />
         <div className='Hero__theme-toggler' onClick={toggleTheme}>
           {theme === 'dark' ? (
-            <button className='Hero__theme-toggler--light toggle-btn shadow-sm'>
+            <button className='Hero__theme-toggler--light toggle-btn shadow-sm border-radius-full'>
               <GiSun onClick={toggleTheme} />
-              <span className="sr-only">Switch to Light Mode</span>
+              <span className='sr-only'>Switch to Light Mode</span>
             </button>
           ) : (
-            <button className='Hero__theme-toggler--dark toggle-btn shadow-sm'>
+            <button className='Hero__theme-toggler--dark toggle-btn shadow-sm border-radius-full'>
               <GiMoon onClick={toggleTheme} />
-              <span className="sr-only">Switch to Dark Mode</span>
+              <span className='sr-only'>Switch to Dark Mode</span>
             </button>
           )}
         </div>

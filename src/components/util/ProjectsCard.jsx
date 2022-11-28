@@ -4,7 +4,7 @@ function ProjectsCard(props) {
 
   return (
     <container className='Card'>
-      <div className='Card__container'>
+      <div className='Card__container border-radius'>
         <img src={imageUrl} alt={title} className='Card__image' />
         <div className='Card__body'>
           <h3 className='Card__body--title'>{title}</h3>

@@ -28,24 +28,24 @@ function About() {
       <img
         src={joel2}
         alt='Joel standing with arms crossed and a bird on his shoulder, in Maidan Square in Kyiv, Ukraine'
-        className='About__img shadow-md'
+        className='About__img shadow-md border-radius'
       />
       <div className='About__social-media'>
-        <a href='#' className='About__social-media--link'>
-          <span className="sr-only">Github</span>
-          <FaGithub className='About__social-media--icon shadow-sm github' />
+        <a href='#' className='About__social-media--link '>
+          <span className='sr-only'>Github</span>
+          <FaGithub className='About__social-media--icon shadow-sm border-radius-full github' />
         </a>
         <a href='#' className='About__social-media--link'>
-          <span className="sr-only">Linkedin</span>
-          <FaLinkedinIn className='About__social-media--icon shadow-sm linkedin' />
+          <span className='sr-only'>Linkedin</span>
+          <FaLinkedinIn className='About__social-media--icon shadow-sm border-radius-full linkedin' />
         </a>
         <a href='#' className='About__social-media--link'>
-          <span className="sr-only">Codepen</span>
-          <FaCodepen className='About__social-media--icon shadow-sm codepen' />
+          <span className='sr-only'>Codepen</span>
+          <FaCodepen className='About__social-media--icon shadow-sm border-radius-full codepen' />
         </a>
         <a href='#' className='About__social-media--link'>
-          <span className="sr-only">Twitter</span>
-          <FaTwitter className='About__social-media--icon shadow-sm twitter' />
+          <span className='sr-only'>Twitter</span>
+          <FaTwitter className='About__social-media--icon shadow-sm border-radius-full twitter' />
         </a>
       </div>
     </section>
