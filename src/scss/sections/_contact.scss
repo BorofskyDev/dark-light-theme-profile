@@ -36,6 +36,10 @@
 
   &__links {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     &--title {
       margin: 1em;
     }
