@@ -1,7 +1,7 @@
 function Contact() {
   return (
-    <section className='Contact'>
-      <div className='Contact__content-container'>
+    <section className='Contact shadow-lg'>
+      <div className='Contact__content-container '>
         {/* top/left content */}
         <div className='Contact__header'>
           <h2 className='Contact__title'>Contact</h2>

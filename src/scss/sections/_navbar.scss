@@ -200,7 +200,7 @@
       &:hover,
       &:focus {
         scale: (1.05);
-        box-shadow: 0 0 0.575em 0.0875em rgba(0, 0, 0, 0.8),
+        box-shadow: 0 5px 0.575em 0.0875em rgba(0, 0, 0, 0.8),
           0 0 1em 0.0625em rgba(0, 0, 0, 0.4),
           0 0 1em 0.0625em hsl(var(--clr-primary) / 0.85) inset;
       }

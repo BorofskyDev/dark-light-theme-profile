@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedinIn, FaCodepen, FaTwitter, FaLink, FaCode } from 'react-icons/fa'
-import joel2 from '../assets/personal-images/me-kyiv.jpg'
+import joel2 from '../../public/personal-images/me-kyiv.jpg'
 
 function About() {
   return (
@@ -28,24 +28,24 @@ function About() {
       <img
         src={joel2}
         alt='Joel standing with arms crossed and a bird on his shoulder, in Maidan Square in Kyiv, Ukraine'
-        className='About__img'
+        className='About__img shadow-md'
       />
       <div className='About__social-media'>
         <a href='#' className='About__social-media--link'>
           <span className="sr-only">Github</span>
-          <FaGithub className='About__social-media--icon github' />
+          <FaGithub className='About__social-media--icon shadow-sm github' />
         </a>
         <a href='#' className='About__social-media--link'>
           <span className="sr-only">Linkedin</span>
-          <FaLinkedinIn className='About__social-media--icon linkedin' />
+          <FaLinkedinIn className='About__social-media--icon shadow-sm linkedin' />
         </a>
         <a href='#' className='About__social-media--link'>
           <span className="sr-only">Codepen</span>
-          <FaCodepen className='About__social-media--icon codepen' />
+          <FaCodepen className='About__social-media--icon shadow-sm codepen' />
         </a>
         <a href='#' className='About__social-media--link'>
           <span className="sr-only">Twitter</span>
-          <FaTwitter className='About__social-media--icon twitter' />
+          <FaTwitter className='About__social-media--icon shadow-sm twitter' />
         </a>
       </div>
     </section>

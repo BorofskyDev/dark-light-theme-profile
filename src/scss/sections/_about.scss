@@ -12,7 +12,7 @@
   &__img {
     border-radius: 2em;
     max-width: 90%;
-    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.8), 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    // box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.8), 0 0 15px 1px rgba(0, 0, 0, 0.4);
     margin: 1.5em auto;
   }
 
@@ -37,8 +37,8 @@
       width: 2em;
       padding: 0.3em;
       border: 1px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.8),
-        0 0 15px 1px rgba(0, 0, 0, 0.4);
+      // box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.8),
+      //   0 0 15px 1px rgba(0, 0, 0, 0.4);
       transform: scale(1);
       transition: all 500ms ease-in-out;
 
@@ -96,5 +96,7 @@
     width: 100%;
   }
 
+
+  
 }
 

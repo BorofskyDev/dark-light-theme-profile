@@ -1,5 +1,5 @@
 import { GiBarbedSun, GiFalconMoon } from 'react-icons/gi'
-import joel1 from '../assets/personal-images/me1.jpg'
+import joel1 from '../../public/personal-images/me1.jpg'
 
 function Hero(props) {
   const { toggleTheme, theme, setTheme } = props
@@ -13,7 +13,7 @@ function Hero(props) {
         <p className='section__subtitle section__subtitle--intro'>
           Creative Frontend Developer
         </p>
-        <img src={joel1} alt='' className='Hero__img' />
+        <img src={joel1} alt='' className='Hero__img shadow-lg' />
         <div className='Hero__theme-toggler' onClick={toggleTheme}>
           <button className='Hero__theme-toggler--light toggle-btn'>
             <GiBarbedSun onClick={toggleTheme} />
