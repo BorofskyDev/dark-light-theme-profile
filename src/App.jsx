@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="app" data-theme={theme}>
       <Navbar />
-      <Hero toggleTheme={toggleTheme} />
+      <Hero toggleTheme={toggleTheme} theme={theme} />
       <About />
       <Stack />
       <Projects />

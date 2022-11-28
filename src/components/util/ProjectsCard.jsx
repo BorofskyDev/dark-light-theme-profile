@@ -7,7 +7,7 @@ function ProjectsCard(props) {
       <div className='Card__container'>
         <img src={imageUrl} alt={title} className='Card__image' />
         <div className='Card__body'>
-          <h3 className='Card__body--title'>Title</h3>
+          <h3 className='Card__body--title'>{title}</h3>
           <div className='Card__body--links'>
             <a href={liveSite} className='Card__body--link'>
               Live Site

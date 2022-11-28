@@ -1,8 +1,8 @@
-import { GiBarbedSun, GiFalconMoon } from 'react-icons/gi'
+import { GiSun, GiMoon } from 'react-icons/gi'
 import joel1 from '../assets/personal-images/me1.jpg'
 
 function Hero(props) {
-  const { toggleTheme, theme, setTheme } = props
+  const { toggleTheme, theme } = props
 
   return (
     <section className='Hero'>
@@ -15,12 +15,17 @@ function Hero(props) {
         </p>
         <img src={joel1} alt='' className='Hero__img shadow-lg' />
         <div className='Hero__theme-toggler' onClick={toggleTheme}>
-          <button className='Hero__theme-toggler--light toggle-btn'>
-            <GiBarbedSun onClick={toggleTheme} />
-          </button>
-          <button className='Hero__theme-toggler--dark toggle-btn'>
-            <GiFalconMoon onClick={toggleTheme} />
-          </button>
+          {theme === 'dark' ? (
+            <button className='Hero__theme-toggler--light toggle-btn shadow-sm'>
+              <GiSun onClick={toggleTheme} />
+              <span className="sr-only">Switch to Light Mode</span>
+            </button>
+          ) : (
+            <button className='Hero__theme-toggler--dark toggle-btn shadow-sm'>
+              <GiMoon onClick={toggleTheme} />
+              <span className="sr-only">Switch to Dark Mode</span>
+            </button>
+          )}
         </div>
       </div>
     </section>
