@@ -22,7 +22,7 @@ export default [
     repository: 'https://github.com/BorofskyDev/new-rebuild',
     liveSite: 'https://gleaming-lokum-a251bf.netlify.app/',
     description:
-      'A rebuild of a live site of a local apartment complex, the focus was on a redesign that fit modern design standards as well as accessability standards. I altered the color scheme slightly to allow for better contract, created a more minimalist background and overall design approach, added in alt tags on images, created more sections to tab to, and added animation to the contact form. This was all done to help provide a more attractive and accessable site, which in theory will increase sales and marketing.',
+      'A rebuild of a live site of a local apartment complex, the focus was on a redesign that fit modern design standards as well as accessability standards. I altered the color scheme slightly to allow for better contract, created a more minimalist background and overall design approach, added in alt tags on images, which in theory will increase sales and marketing.',
     imageUrl: `${UptownLanding}`,
   },
   {
@@ -31,7 +31,7 @@ export default [
     repository: 'https://github.com/BorofskyDev/club-bacchus',
     liveSite: 'https://strong-florentine-202a95.netlify.app/',
     description:
-      'A fictional club. I created the site to show off video-background-text as well as other design elements. While not minimalist, I followed a minimalist mindset on layout and content. Build in vanilla Javascript, I made use of modals for the fictional payment system and even set up a CSS-only credit card to function as a way for a client to enter their payment information. ',
+      'I created the site to show off video-background-text as well as other design elements. I followed a minimalist mindset on layout and content. Build in vanilla Javascript, I made use of modals for the fictional payment system . ',
     imageUrl: `${Bacchus}`,
   },
   {

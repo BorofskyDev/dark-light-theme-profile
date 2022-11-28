@@ -1,7 +1,10 @@
 .Card {
+
   &__container {
     max-width: 15.625em;
-    height: 30em;
+    margin: 0 auto;
+    height: 33em;
+    // overflow: auto;
     border: 1px solid hsl(var(--clr-secondary));
     border-radius: 2em;
     transition: all 500ms linear;
@@ -20,6 +23,7 @@
 
   &__image {
     max-width: 100%;
+    border-radius: 2em 2em 0 0 
   }
 
   &__body {
@@ -51,7 +55,9 @@
 
     &--description {
       text-align: left;
-      margin: 0.5em;
+      margin: auto;
+      margin-top: 1em;
+      overflow: auto;
     }
   }
 }

@@ -1,7 +1,10 @@
 .Projects {
     &__container {
         max-width: 1200px;
-        margin-top: 2em;
+        margin: 2em auto;
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: repeat(auto-fit, minmax(16.5em, 1fr));
     }
 
     
