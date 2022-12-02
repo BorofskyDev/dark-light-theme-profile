@@ -4,13 +4,7 @@
   --clr-primary: 161 94% 45%;
   --clr-secondary: 347 77% 55%;
 
-  --bg-animated: linear-gradient(
-    270deg,
-    #18181b,
-    #27272a,
-    #3f3f46,
-    #52525b
-  );
+  --bg-animated: linear-gradient(270deg, #18181b, #27272a, #3f3f46, #52525b);
 
   --ff-heading: 'Raleway', sans-serif;
   --ff-body: 'Inter', sans-serif;
@@ -41,13 +35,7 @@
   --clr-primary: 161 65% 55%;
   --clr-secondary: 347 100% 65%;
 
-  --bg-animated: linear-gradient(
-    270deg,
-    #fafafa,
-    #f4f4f5,
-    #e4e4e7,
-    #d4d4d8
-  );
+  --bg-animated: linear-gradient(270deg, #fafafa, #f4f4f5, #e4e4e7, #d4d4d8);
 }
 
 *,
@@ -87,7 +75,6 @@ a {
   text-decoration: none;
 }
 
-
 .app {
   margin: 0;
   height: 100%;
@@ -99,6 +86,7 @@ a {
   background-image: var(--bg-animated);
   background-size: 1200% 1200%;
   transition: all 500ms ease-in;
+  overflow: hidden;
   -webkit-animation: bg-animate 30s ease infinite;
   -moz-animation: bg-animate 30s ease infinite;
   animation: bg-animate 30s ease infinite;
@@ -148,4 +136,32 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--bg-primary));
+  border-radius: 2em;
+  margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--clr-secondary));
+  border-radius: 2em;
+  border: 4px solid hsl(var(--bg-primary));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--clr-primary));
+  border-radius: 2em;
+}
+
+@supports (scrollbar-cover: red blue) {
+  * {
+    scrollbar-color: hsl(var(--clr-primary)) hsl(var(--txt-primary));
+    scrollbar-width: thin;
+  }
 }

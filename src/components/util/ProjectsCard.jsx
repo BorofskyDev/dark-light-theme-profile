@@ -1,9 +1,10 @@
-
+import {motion} from 'framer-motion'
+import { leftAnimate } from '../animation/directionalAnimations'
 function ProjectsCard(props) {
   const { title, repository, liveSite, description, imageUrl } = props
 
   return (
-    <div className='Card'>
+    <motion.div className='Card' variants={leftAnimate}>
       <div className='Card__container border-radius'>
         <img src={imageUrl} alt={title} className='Card__image' />
         <div className='Card__body'>
@@ -21,7 +22,7 @@ function ProjectsCard(props) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

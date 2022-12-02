@@ -1,21 +1,41 @@
+import { motion } from 'framer-motion'
 import {
   FaGithub,
   FaLinkedinIn,
   FaCodepen,
-  FaTwitter,
-  FaLink,
-  FaCode,
+  FaTwitter
 } from 'react-icons/fa'
+import {
+  leftAnimate,
+  topAnimate,
+  rightAnimate,
+  bottomAnimate,
+} from './animation/directionalAnimations'
 import joel2 from '../assets/personal-images/me-kyiv.jpg'
 
 function About() {
   return (
-    <section className='About' id='about'>
-      <h2 className='section__title section__title--about'>Who I am</h2>
-      <p className='section__subtitle section__subtitle--about'>
+    <motion.section
+      className='About'
+      id='about'
+      initial={'offscreen'}
+      whileInView={'onscreen'}
+      viewport={{ once: true, amount: 0.5 }}
+      // transition={{ staggerChildren: 0.5 }}
+    >
+      <motion.h2
+        className='section__title section__title--about'
+        variants={topAnimate}
+      >
+        Who I am
+      </motion.h2>
+      <motion.p
+        className='section__subtitle section__subtitle--about'
+        variants={leftAnimate}
+      >
         Developer and Designer based in the USA
-      </p>
-      <div className='About__body'>
+      </motion.p>
+      <motion.div className='About__body' variants={bottomAnimate}>
         <p>
           Currently based out of Wichita, KS, I am a frontend developer with an
           eye for design. I am unabashedly in love with CSS, ThreeJS, and React
@@ -31,13 +51,15 @@ function About() {
           and money permit, traveling. I enjoy experiencing different cultures
           and have a host of places that I want to visit.
         </p>
-      </div>
-      <img
+      </motion.div>
+
+      <motion.img
         src={joel2}
         alt='Joel standing with arms crossed and a bird on his shoulder, in Maidan Square in Kyiv, Ukraine'
         className='About__img shadow-md border-radius'
+        variants={rightAnimate}
       />
-      <div className='About__social-media'>
+      <motion.div className='About__social-media' variants={bottomAnimate}>
         <a
           href='https://github.com/BorofskyDev'
           target='_blank'
@@ -70,8 +92,8 @@ function About() {
           <span className='sr-only'>Twitter</span>
           <FaTwitter className='About__social-media--icon shadow-sm border-radius-full twitter' />
         </a>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }
 
