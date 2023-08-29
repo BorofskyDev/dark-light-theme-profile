@@ -1,10 +1,8 @@
 :root {
-  --bg-primary: 240 6% 10%;
-  --txt-primary: 240 5% 96%;
-  --clr-primary: 161 94% 45%;
-  --clr-secondary: 347 77% 55%;
-
-  --bg-animated: linear-gradient(270deg, #18181b, #27272a, #3f3f46, #52525b);
+  --bg-primary: 0 0% 7%;
+  --txt-primary: 0 0% 87%;
+  --clr-primary: 200 100% 70%;
+  --clr-secondary: 0 68% 42%;
 
   --ff-heading: 'Raleway', sans-serif;
   --ff-body: 'Inter', sans-serif;
@@ -30,12 +28,12 @@
 }
 
 [data-theme='light'] {
-  --txt-primary: 240 6% 10%;
-  --bg-primary: 240 5% 96%;
-  --clr-primary: 161 65% 55%;
-  --clr-secondary: 347 100% 65%;
+  --bg-primary: 0 0% 96%;
+  --txt-primary: 0 0% 7%;
+  --clr-primary: 210 100% 35%;
+  --clr-secondary: 0 59% 41%;
 
-  --bg-animated: linear-gradient(270deg, #fafafa, #f4f4f5, #e4e4e7, #d4d4d8);
+  
 }
 
 *,
@@ -83,7 +81,6 @@ a {
   font-size: var(--fs-body);
   color: hsl(var(--txt-primary));
   background-color: hsl(var(--bg-primary));
-  background-image: var(--bg-animated);
   background-size: 1200% 1200%;
   transition: all 500ms ease-in;
   overflow: hidden;

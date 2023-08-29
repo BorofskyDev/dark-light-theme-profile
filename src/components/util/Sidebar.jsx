@@ -7,6 +7,7 @@ function Sidebar(props) {
   let sidebarMenuOverlay = useRef(null)
   let menuLayer = useRef(null)
   let menuTimeline = useRef(null)
+  let menuRef = useRef(null)
 
   useEffect(() => {
     menuTimeline.current = gsap.timeline({ paused: true })
@@ -28,14 +29,25 @@ function Sidebar(props) {
     menu ? menuTimeline.current.play() : menuTimeline.current.reverse()
   }, [menu])
 
+  useEffect(() => {
+    let handler = (e) => {
+      if(!menuRef.current.contains(e.target)){
+        setMenu(false)
+      } 
+    }
+    document.addEventListener('mousedown', handler)
 
+    return() => {
+      document.removeEventListener('mousedown', handler)
+    }
+  }, )
 
   return (
     <div className='Menu' ref={(el) => (sidebarMenuOverlay = el)}>
       <div className='Menu__wrapper'>
         <div className='Menu__layer' ref={(el) => (menuLayer = el)}></div>
         <nav className='Menu__nav' ref={(el) => (sidebarMenu = el)}>
-          <div className='Menu__top'>
+          <div className='Menu__top' ref={menuRef}>
             <ul className='Menu__links'>
               <li className='Menu__link'>
                 <a href='#about' className='Menu__link--section'>
