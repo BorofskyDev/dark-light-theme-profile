@@ -1,41 +1,52 @@
 import { motion } from 'framer-motion'
-import {
-  FaGithub,
-  FaLinkedinIn,
-  FaCodepen,
-  FaTwitter
-} from 'react-icons/fa'
+import { useOnScreen } from '../hooks/useOnScreen'
+import { FaGithub, FaLinkedinIn, FaCodepen, FaTwitter } from 'react-icons/fa'
 import {
   leftAnimate,
   topAnimate,
   rightAnimate,
   bottomAnimate,
+  expandElement,
 } from './animation/directionalAnimations'
 import joel2 from '../assets/personal-images/me-kyiv.jpg'
 
 function About() {
+  const [ref, isVisible] = useOnScreen({ rootMargin: '-100px'})
   return (
     <motion.section
+      ref={ref}
       className='About'
       id='about'
-      initial={'offscreen'}
-      whileInView={'onscreen'}
-      viewport={{ once: true, amount: 0.5 }}
+      initial='initial'
+      animate={isVisible ? 'animate' : 'initial'}
+      variants={expandElement}
       // transition={{ staggerChildren: 0.5 }}
     >
       <motion.h2
+        ref={ref}
         className='section__title section__title--about'
-        variants={topAnimate}
+        initial='initial'
+        animate={isVisible ? 'animate' : 'initial'}
+        variants={expandElement}
       >
         Who I am
       </motion.h2>
       <motion.p
+        ref={ref}
         className='section__subtitle section__subtitle--about'
-        variants={leftAnimate}
+        initial='initial'
+        animate={isVisible ? 'animate' : 'initial'}
+        variants={expandElement}
       >
         Developer and Designer based in the USA
       </motion.p>
-      <motion.div className='About__body' variants={bottomAnimate}>
+      <motion.div
+        ref={ref}
+        className='About__body'
+        initial='initial'
+        animate={isVisible ? 'animate' : 'initial'}
+        variants={expandElement}
+      >
         <p>
           Currently based out of Wichita, KS, I am a frontend developer with an
           eye for design. I am unabashedly in love with CSS, ThreeJS, and React
@@ -54,12 +65,21 @@ function About() {
       </motion.div>
 
       <motion.img
+        ref={ref}
         src={joel2}
         alt='Joel standing with arms crossed and a bird on his shoulder, in Maidan Square in Kyiv, Ukraine'
         className='About__img shadow-md border-radius'
-        variants={rightAnimate}
+        initial='initial'
+        animate={isVisible ? 'animate' : 'initial'}
+        variants={expandElement}
       />
-      <motion.div className='About__social-media' variants={bottomAnimate}>
+      <motion.div
+        ref={ref}
+        className='About__social-media'
+        initial='initial'
+        animate={isVisible ? 'animate' : 'initial'}
+        variants={expandElement}
+      >
         <a
           href='https://github.com/BorofskyDev'
           target='_blank'

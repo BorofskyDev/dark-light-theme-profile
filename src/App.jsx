@@ -1,5 +1,13 @@
 import { useState } from 'react'
-import { Navbar, Hero, About, Stack, Projects, Contact, Footer } from './components/index'
+import {
+  Navbar,
+  Hero,
+  About,
+  Stack,
+  Projects,
+  Contact,
+  Footer,
+} from './components/index'
 import './scss/index.scss'
 
 function App() {
@@ -11,7 +19,7 @@ function App() {
   }
 
   return (
-    <div className="app" data-theme={theme}>
+    <div className='app' data-theme={theme}>
       <Navbar />
       <Hero toggleTheme={toggleTheme} theme={theme} />
       <About />

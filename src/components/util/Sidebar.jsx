@@ -1,53 +1,47 @@
 import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import { motion, useAnimation } from 'framer-motion'
 
 function Sidebar(props) {
   const { menu, setMenu } = props
-  let sidebarMenu = useRef(null)
-  let sidebarMenuOverlay = useRef(null)
-  let menuLayer = useRef(null)
-  let menuTimeline = useRef(null)
-  let menuRef = useRef(null)
+  const controls = useAnimation()
 
   useEffect(() => {
-    menuTimeline.current = gsap.timeline({ paused: true })
-    menuTimeline.current.fromTo(
-      [sidebarMenuOverlay, menuLayer, sidebarMenu],
-      { duration: 0, x: '100%' },
-      {
-        duration: 0.75,
-        x: '0%',
-        ease: 'power3.inOut',
-        stagger: {
-          amount: 0.5,
-        },
-      }
-    )
-  }, [])
-
-  useEffect(() => {
-    menu ? menuTimeline.current.play() : menuTimeline.current.reverse()
-  }, [menu])
+    if (menu) {
+      controls.start({
+        x: 0,
+        transition: { duration: 0.75, ease: 'easeInOut' },
+      })
+    } else {
+      controls.start({
+        x: '100%',
+        transition: { duration: 0.75, ease: 'easeInOut' },
+      })
+    }
+  }, [menu, controls])
 
   useEffect(() => {
     let handler = (e) => {
-      if(!menuRef.current.contains(e.target)){
+      if (!menuRef.current.contains(e.target)) {
         setMenu(false)
-      } 
+      }
     }
     document.addEventListener('mousedown', handler)
 
-    return() => {
+    return () => {
       document.removeEventListener('mousedown', handler)
     }
-  }, )
+  }, [])
 
   return (
-    <div className='Menu' ref={(el) => (sidebarMenuOverlay = el)}>
+    <motion.div
+      initial={{ x: '100%' }}
+      animate={controls}
+      className='Menu'
+    >
       <div className='Menu__wrapper'>
-        <div className='Menu__layer' ref={(el) => (menuLayer = el)}></div>
-        <nav className='Menu__nav' ref={(el) => (sidebarMenu = el)}>
-          <div className='Menu__top' ref={menuRef}>
+        <div className='Menu__layer'></div>
+        <nav className='Menu__nav'>
+          <div className='Menu__top'>
             <ul className='Menu__links'>
               <li className='Menu__link'>
                 <a href='#about' className='Menu__link--section'>
@@ -68,7 +62,7 @@ function Sidebar(props) {
           </div>
         </nav>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
