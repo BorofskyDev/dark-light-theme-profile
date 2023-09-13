@@ -12,11 +12,18 @@
   padding: 1.5em;
   z-index: 1000;
 
+  @media (min-width: 55em){
+    justify-content: space-between;
+  }
+
   &__logo {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     letter-spacing: 0.1265em;
+    @media (min-width: 55em) {
+      justify-self: flex-start;
+    }
 
     &--title {
       font-weight: bolder;
@@ -52,6 +59,10 @@
     padding: 0.625em;
     cursor: pointer;
     z-index: 1000;
+
+    @media (min-width: 55em) {
+      display: none;
+    }
 
     span {
       display: inline-flex;
@@ -178,9 +189,13 @@
     overflow-y: auto;
     margin-top: 2.5em;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     flex-basis: 100%;
     flex-shrink: 0;
+
+    @media (min-width: 55em) {
+      margin-right: 1.4em;
+    }
   }
 
   &__link {

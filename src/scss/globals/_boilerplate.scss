@@ -4,8 +4,8 @@
   --clr-primary: 200 100% 70%;
   --clr-secondary: 0 68% 42%;
 
-  --ff-heading: 'Raleway', sans-serif;
-  --ff-body: 'Inter', sans-serif;
+  --ff-heading: 'Playfair Display', serif;
+  --ff-body: 'Roboto', sans-serif;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -32,8 +32,6 @@
   --txt-primary: 0 0% 7%;
   --clr-primary: 210 100% 35%;
   --clr-secondary: 0 59% 41%;
-
-  
 }
 
 *,
@@ -84,43 +82,6 @@ a {
   background-size: 1200% 1200%;
   transition: all 500ms ease-in;
   overflow: hidden;
-  -webkit-animation: bg-animate 30s ease infinite;
-  -moz-animation: bg-animate 30s ease infinite;
-  animation: bg-animate 30s ease infinite;
-
-  @-webkit-keyframes bg-animate {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @-moz-keyframes bg-animate {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @keyframes bg-animate {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 }
 
 html {
