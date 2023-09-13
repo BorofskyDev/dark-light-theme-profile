@@ -1,21 +1,36 @@
 import { motion } from 'framer-motion'
-import { topAnimate, leftAnimate, rightAnimate, bottomAnimate} from './animation/directionalAnimations'
+import { useOnScreen } from '../hooks/useOnScreen'
+import { expandElement } from './animation/directionalAnimations'
 function Contact() {
+  const [ref, isVisible] = useOnScreen({ rootMargin: '-100px' })
   return (
     <motion.section
+      ref={ref}
       className='Contact shadow-lg border-radius'
       id='contact'
-      initial={'offscreen'}
-      whileInView={'onscreen'}
-      viewport={{ once: true, amount: 0.5 }}
+      initial='initial'
+      animate={isVisible ? 'animate' : 'initial'}
+      variants={expandElement}
     >
       <div className='Contact__content-container '>
         {/* top/left content */}
-        <motion.div className='Contact__header' variants={topAnimate}>
+        <motion.div
+          className='Contact__header'
+          ref={ref}
+          initial='initial'
+          animate={isVisible ? 'animate' : 'initial'}
+          variants={expandElement}
+        >
           <h2 className='Contact__title'>Contact</h2>
           <h2 className='Contact__title--bottom'>Me</h2>
         </motion.div>
-        <motion.div className='Contact__links' variants={leftAnimate}>
+        <motion.div
+          className='Contact__links'
+          ref={ref}
+          initial='initial'
+          animate={isVisible ? 'animate' : 'initial'}
+          variants={expandElement}
+        >
           <h3 className='Contact__links--title'>Also find me here:</h3>
           <a
             href='https://github.com/BorofskyDev'
@@ -46,7 +61,13 @@ function Contact() {
             CodePen
           </a>
         </motion.div>
-        <motion.p className='Contact__email' variants={leftAnimate}>
+        <motion.p
+          className='Contact__email'
+          ref={ref}
+          initial='initial'
+          animate={isVisible ? 'animate' : 'initial'}
+          variants={expandElement}
+        >
           Form not working? joelborofskydev@gmail
         </motion.p>
       </div>
@@ -57,7 +78,13 @@ function Contact() {
           method='post'
           className='Contact__form'
         >
-          <motion.div className='Contact__form-control' variants={rightAnimate}>
+          <motion.div
+            className='Contact__form-control'
+            ref={ref}
+            initial='initial'
+            animate={isVisible ? 'animate' : 'initial'}
+            variants={expandElement}
+          >
             <label htmlFor='full name' className='sr-only'>
               Enter your name
             </label>
@@ -71,7 +98,13 @@ function Contact() {
               className='Contact__form-control--input border-radius'
             />
           </motion.div>
-          <motion.div className='Contact__form-control' variants={rightAnimate}>
+          <motion.div
+            className='Contact__form-control'
+            ref={ref}
+            initial='initial'
+            animate={isVisible ? 'animate' : 'initial'}
+            variants={expandElement}
+          >
             <label htmlFor='email' className='sr-only'>
               Enter your email
             </label>
@@ -83,7 +116,13 @@ function Contact() {
               className='Contact__form-control--input border-radius'
             />
           </motion.div>
-          <motion.div className='Contact__form-control' variants={rightAnimate}>
+          <motion.div
+            className='Contact__form-control'
+            ref={ref}
+            initial='initial'
+            animate={isVisible ? 'animate' : 'initial'}
+            variants={expandElement}
+          >
             <label htmlFor='subject' className='sr-only'>
               Enter the subject of the email
             </label>
@@ -97,7 +136,13 @@ function Contact() {
               className='Contact__form-control--input border-radius'
             />
           </motion.div>
-          <motion.div className='Contact__form-control' variants={rightAnimate}>
+          <motion.div
+            className='Contact__form-control'
+            ref={ref}
+            initial='initial'
+            animate={isVisible ? 'animate' : 'initial'}
+            variants={expandElement}
+          >
             <label htmlFor='message' className='sr-only'>
               Enter your message
             </label>
@@ -108,7 +153,13 @@ function Contact() {
               className='Contact__form-control--input border-radius'
             />
           </motion.div>
-          <motion.button className='Contact__button shadow-md border-radius' variants={bottomAnimate}>
+          <motion.button
+            className='Contact__button shadow-md border-radius'
+            ref={ref}
+            initial='initial'
+            animate={isVisible ? 'animate' : 'initial'}
+            variants={expandElement}
+          >
             Send Message
           </motion.button>
         </form>
@@ -118,4 +169,3 @@ function Contact() {
 }
 
 export default Contact
-

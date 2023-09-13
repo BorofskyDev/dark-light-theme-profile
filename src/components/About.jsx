@@ -1,17 +1,11 @@
 import { motion } from 'framer-motion'
 import { useOnScreen } from '../hooks/useOnScreen'
 import { FaGithub, FaLinkedinIn, FaCodepen, FaTwitter } from 'react-icons/fa'
-import {
-  leftAnimate,
-  topAnimate,
-  rightAnimate,
-  bottomAnimate,
-  expandElement,
-} from './animation/directionalAnimations'
+import { expandElement } from './animation/directionalAnimations'
 import joel2 from '../assets/personal-images/me-kyiv.jpg'
 
 function About() {
-  const [ref, isVisible] = useOnScreen({ rootMargin: '-100px'})
+  const [ref, isVisible] = useOnScreen({ rootMargin: '-100px' })
   return (
     <motion.section
       ref={ref}
